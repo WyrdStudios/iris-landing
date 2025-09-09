@@ -220,12 +220,12 @@ function subscribeNewsletter(event) {
 
 // Copy email to clipboard
 function copyEmail() {
-    const email = 'support@iris.ai';
+    const email = 'contact@meplusiris.com';
     navigator.clipboard.writeText(email).then(() => {
         const copyBtn = document.querySelector('.email-copy-btn');
         const originalText = copyBtn.textContent;
         copyBtn.textContent = 'Copied!';
-        copyBtn.style.background = '#34D399';
+        copyBtn.style.background = '#D4A017';
         
         setTimeout(() => {
             copyBtn.textContent = originalText;
