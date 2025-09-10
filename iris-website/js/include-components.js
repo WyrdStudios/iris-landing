@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             </div>
                             <div class="nav-items">
                                 <a href="/" class="nav-item">Home</a>
-                                <a href="/pricing" class="nav-item">Pricing</a>
+                                <!-- <a href="/pricing" class="nav-item">Pricing</a> -->
                                 <a href="/waitlist" class="nav-item">Waitlist</a>
                                 <a href="/signup" class="nav-item">Sign Up</a>
                                 <a href="/login" class="nav-item">Log In</a>

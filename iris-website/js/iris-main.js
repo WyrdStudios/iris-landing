@@ -109,8 +109,8 @@ function setActiveNavigation() {
     
     if (currentPath === '/' || currentPath === '/index.html' || currentPath.endsWith('/')) {
         activeNavItem = document.querySelector('.nav-item[href="/"]');
-    } else if (currentPath.includes('pricing')) {
-        activeNavItem = document.querySelector('.nav-item[href="/pricing.html"]');
+    // } else if (currentPath.includes('pricing')) {
+    //     activeNavItem = document.querySelector('.nav-item[href="/pricing.html"]');
     } else if (currentPath.includes('waitlist')) {
         activeNavItem = document.querySelector('.nav-item[href="/waitlist.html"]');
     } else if (currentPath.includes('signup')) {
