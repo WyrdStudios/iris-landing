@@ -1,0 +1,29 @@
+{
+  "name": "iris-website",
+  "version": "1.0.0",
+  "description": "Iris Personalized Assistant Website - Build Tools and Dependencies",
+  "main": "index.js",
+  "scripts": {
+    "build": "./minify.sh",
+    "dev": "python3 run_server.py",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WyrdStudios/iris-landing.git"
+  },
+  "keywords": ["iris", "personalized-assistant", "website", "build-tools", "minification"],
+  "author": "Iris <contact@meplusiris.com>",
+  "license": "UNLICENSED",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/iris-ai/iris-website/issues"
+  },
+  "homepage": "https://meplusiris.com",
+  "private": true,
+  "devDependencies": {
+    "clean-css-cli": "^5.6.3",
+    "cssnano": "^7.1.0",
+    "terser": "^5.43.1"
+  }
+}

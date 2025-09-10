@@ -1,4 +1,6 @@
 OLDIrisWebsite/*
 WyrdStudiosWebsite/*
-.DS_Store
+**/.DS_Store
+**/node_modules/
 DesignSystem/*
+private/*

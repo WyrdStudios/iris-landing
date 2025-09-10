@@ -109,14 +109,8 @@ function setActiveNavigation() {
     
     if (currentPath === '/' || currentPath === '/index.html' || currentPath.endsWith('/')) {
         activeNavItem = document.querySelector('.nav-item[href="/"]');
-    // } else if (currentPath.includes('pricing')) {
-    //     activeNavItem = document.querySelector('.nav-item[href="/pricing.html"]');
     } else if (currentPath.includes('waitlist')) {
         activeNavItem = document.querySelector('.nav-item[href="/waitlist.html"]');
-    } else if (currentPath.includes('signup')) {
-        activeNavItem = document.querySelector('.nav-item[href="/signup.html"]');
-    } else if (currentPath.includes('login')) {
-        activeNavItem = document.querySelector('.nav-item[href="/login.html"]');
     }
     
     if (activeNavItem) {
@@ -187,36 +181,6 @@ function initializeArchetypeDemo() {
     }
 }
 
-// Newsletter subscription
-function subscribeNewsletter(event) {
-    event.preventDefault();
-    
-    const form = event.target;
-    const emailInput = form.querySelector('input[type="email"]');
-    const submitButton = form.querySelector('button[type="submit"]');
-    const email = emailInput.value;
-    
-    if (!email || !email.includes('@')) {
-        alert('Please enter a valid email address');
-        return;
-    }
-    
-    // Show loading state
-    const originalText = submitButton.textContent;
-    submitButton.textContent = 'Subscribing...';
-    submitButton.disabled = true;
-    
-    // Simulate API call (replace with actual endpoint)
-    setTimeout(() => {
-        submitButton.textContent = 'Subscribed!';
-        emailInput.value = '';
-        
-        setTimeout(() => {
-            submitButton.textContent = originalText;
-            submitButton.disabled = false;
-        }, 2000);
-    }, 1000);
-}
 
 // Copy email to clipboard
 function copyEmail() {

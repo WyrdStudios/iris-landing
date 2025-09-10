@@ -1,0 +1,38 @@
+# GitHub Pages Configuration for Iris Personalized Assistant Website
+# This file tells Jekyll (used by GitHub Pages) which files to exclude from the build
+
+# Exclude development and system files from public deployment
+exclude:
+  - tools/                    # Development utilities and build tools
+  - .git/                     # Git repository metadata
+  - .gitignore               # Git ignore rules
+  - README.md                 # Development documentation
+  - .DS_Store                 # macOS system files
+  - package.json              # Node.js dependencies
+  - node_modules/             # Node.js packages
+  - __pycache__/              # Python cache files
+
+# Include all public website files
+# HTML files, CSS, JS, images, components, and SEO files will be published
+
+# Site metadata for SEO and context
+title: "Iris - Your Private Thought Partner Built for You"
+description: "Iris is your personalized assistant that learns you - no tech experience needed. Simple. Secure. Designed around your mind, not the crowd."
+author: "Iris Personalized Assistant"
+url: "https://meplusiris.com"
+baseurl: ""
+
+# Markdown processing
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+# Sass/SCSS options for CSS processing
+sass:
+  style: compressed
+
+# Jekyll build settings
+safe: true
+incremental: false
+highlighter: rouge
