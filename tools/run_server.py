@@ -1,5 +1,5 @@
 """
-Iris AI Assistant Website - Local Development Server
+Iris Personalized Assistant Website - Local Development Server
 Copyright (c) 2025 Iris AI. All rights reserved.
 
 This software is proprietary and confidential. Unauthorized copying, 
@@ -15,7 +15,7 @@ and will be prosecuted to the maximum extent possible under the law.
 For licensing inquiries, contact: contact@meplusiris.com
 
 Iris AI
-Your Private Thought Partner, Built for You.
+Your Personalized Assistant, Built for You.
 """
 
 import http.server
@@ -62,7 +62,7 @@ print(f"Opening browser to {url}")
 webbrowser.open(url)
 
 print("Server started! Press Ctrl+C to stop.")
-print("Your Private Thought Partner, Built for You. 🤖")
+print("Your Personalized Assistant, Built for You. 🤖")
 
 try:
     # Start server in a separate thread

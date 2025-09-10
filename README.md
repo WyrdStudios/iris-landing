@@ -1,6 +1,6 @@
 # Iris Personalized Assistant - Landing Page
 
-**Your Private Thought Partner, Built for You.**
+**Your Personalized Assistant, Built for You.**
 
 This repository contains the complete landing page and marketing website for Iris Personalized Assistant, an intelligent assistant that learns and adapts to individual users' thinking styles and preferences.
 
@@ -155,6 +155,6 @@ See `tools/README.md` for detailed build system documentation.
 
 ---
 
-**Built with ❤️ for Iris AI - Your Private Thought Partner, Built for You.**
+**Built with ❤️ for Iris AI - Your Personalized Assistant, Built for You.**
 
 *This repository is proprietary and confidential. All rights reserved.*

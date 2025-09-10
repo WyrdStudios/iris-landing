@@ -1,6 +1,6 @@
-# Iris AI Assistant Website - Build Tools
+# Iris Personalized Assistant Website - Build Tools
 
-This directory contains the build tools and development utilities for the Iris AI Assistant website.
+This directory contains the build tools and development utilities for the Iris Personalized Assistant website.
 
 ## Build Tools Overview
 
@@ -174,4 +174,4 @@ For technical questions or build issues:
 
 ---
 
-**Built with ❤️ for Iris AI - Your Private Thought Partner, Built for You.**
+**Built with ❤️ for Iris AI - Your Personalized Assistant, Built for You.**
