@@ -468,8 +468,8 @@ body {
 /* Hero Section */
 .hero-section {
     text-align: center;
-    margin-bottom: 4rem;
-    padding: 4rem 0;
+    margin-bottom: 0rem;
+    padding: 1rem 0;
 }
 
 .hero-headline {
@@ -489,7 +489,7 @@ body {
     font-size: 1.5rem;
     color: var(--text-secondary);
     line-height: 1.5;
-    margin-bottom: 3rem;
+    margin-bottom: 0rem;
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
