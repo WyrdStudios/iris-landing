@@ -257,6 +257,12 @@ body {
     }
 }
 
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
 .logo {
     font-family: 'DM Serif Display', serif;
     font-size: 2rem;

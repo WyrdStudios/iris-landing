@@ -110,7 +110,7 @@ function setActiveNavigation() {
     if (currentPath === '/' || currentPath === '/index.html' || currentPath.endsWith('/')) {
         activeNavItem = document.querySelector('.nav-item[href="/"]');
     } else if (currentPath.includes('waitlist')) {
-        activeNavItem = document.querySelector('.nav-item[href="/waitlist.html"]');
+        activeNavItem = document.querySelector('.nav-item[href="/waitlist"]');
     }
     
     if (activeNavItem) {
