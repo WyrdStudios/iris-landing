@@ -426,8 +426,7 @@ body {
     color: var(--text-secondary);
     line-height: 1.6;
     max-width: 800px;
-    margin: 0 auto 2rem;
-    text-align: center;
+    margin: 0 0 2rem 0;
 }
 
 /* Hero Section */
@@ -2021,4 +2020,80 @@ html {
 
 .section-content.active {
     display: block;
+}
+
+/* Policy Pages Styling */
+.policy-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.policy-section {
+    margin-bottom: 3rem;
+}
+
+.policy-section h3 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--text-heading);
+    margin-bottom: 1rem;
+    letter-spacing: -0.01em;
+}
+
+.policy-section h4 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.375rem;
+    font-weight: 500;
+    color: var(--text-heading);
+    margin: 1.5rem 0 0.75rem 0;
+}
+
+.policy-section p {
+    font-family: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.policy-section ul {
+    margin: 1rem 0 1rem 1.5rem;
+}
+
+.policy-section li {
+    font-family: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+}
+
+.policy-explanation {
+    background: var(--overlay-light);
+    border-left: 4px solid var(--accent-primary);
+    padding: 1rem 1.5rem;
+    margin: 1rem 0;
+    border-radius: 0 8px 8px 0;
+}
+
+.policy-explanation strong {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.last-updated {
+    margin-bottom: 2rem;
+    color: var(--text-secondary);
+    font-style: italic;
+    font-family: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.welcome-text {
+    font-family: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 2rem;
 }
