@@ -4,8 +4,14 @@
         <div class="brand">
             <div class="brand-container">
                 <a href="/" class="logo-link">
-                    <img src="/images/IrisLogoSage.png" alt="Iris Logo" class="brand-logo logo-light-theme">
-                    <img src="/images/IrisLogoWhite.png" alt="Iris Logo" class="brand-logo logo-dark-theme">
+                    <picture class="brand-logo logo-light-theme">
+                        <source srcset="/images/IrisLogoSage.webp 1x, /images/IrisLogoSage@2x.webp 2x" type="image/webp">
+                        <img src="/images/IrisLogoSage.png" alt="Iris Logo" width="40" height="40">
+                    </picture>
+                    <picture class="brand-logo logo-dark-theme">
+                        <source srcset="/images/IrisLogoWhite.webp 1x, /images/IrisLogoWhite@2x.webp 2x" type="image/webp">
+                        <img src="/images/IrisLogoWhite.png" alt="Iris Logo" width="40" height="40">
+                    </picture>
                     <span class="logo">Iris</span>
                 </a>
             </div>
