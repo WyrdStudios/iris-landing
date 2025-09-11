@@ -7,7 +7,7 @@
 
 // Archetype responses for the demo
 const archetypeResponses = {
-    architect: `Here's your structured weekend art exploration plan for Alberta Arts District:
+    planner: `Here's your structured weekend art exploration plan for Alberta Arts District:
 
 • Friday 6-8pm: Guardino Gallery - Contemporary Pacific Northwest artists
 • Saturday 10am-12pm: Alberta Street Gallery - Local emerging artists
@@ -16,7 +16,7 @@ const archetypeResponses = {
 
 Each location is within walking distance on Alberta Street. I've included nearby cafes like Extracto Coffee and Case Study Coffee for breaks, with optimal walking routes mapped out.`,
 
-    catalyst: `What if we completely reimagined your art weekend in Alberta? Instead of traditional galleries, what about:
+    explorer: `What if we completely reimagined your art weekend in Alberta? Instead of traditional galleries, what about:
 
 • Street art walking tour along Alberta Street's murals and installations
 • Artist studio visits at the Alberta Street Studios collective
@@ -25,7 +25,7 @@ Each location is within walking distance on Alberta Street. I've included nearby
 
 Let's challenge the typical gallery experience and discover art in ways that might surprise you. The Alberta Arts District is known for its creative energy - what sounds most intriguing?`,
 
-    scholar: `Here's a comprehensive overview of Alberta Arts District opportunities:
+    guide: `Here's a comprehensive overview of Alberta Arts District opportunities:
 
 • 8 galleries within 1 mile on Alberta Street, ranging from contemporary to folk art
 • 3 artist collectives: Alberta Street Studios, North Portland Arts Collective, and the Alberta Street Gallery cooperative
