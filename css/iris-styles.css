@@ -1019,7 +1019,7 @@ body {
     opacity: 0;
     visibility: hidden;
     transform: translateY(20px);
-    box-shadow: 0 4px 12px var(--shadow-color);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     z-index: 1000;
 }
 
@@ -1032,6 +1032,7 @@ body {
 .back-to-top:hover {
     background: var(--accent-secondary);
     transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
 
 /* Responsive Design */
