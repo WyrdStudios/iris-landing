@@ -257,6 +257,37 @@ body {
     }
 }
 
+/* Footer Logo Theme Switching */
+/* Light theme - show blue logo, hide white logo */
+.footer-logo.logo-light-theme {
+    display: block;
+}
+
+.footer-logo.logo-dark-theme {
+    display: none;
+}
+
+/* Dark theme - show white logo, hide blue logo */
+[data-theme="dark"] .footer-logo.logo-light-theme {
+    display: none;
+}
+
+[data-theme="dark"] .footer-logo.logo-dark-theme {
+    display: block;
+}
+
+/* System preference fallback for dark theme */
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme]) .footer-logo.logo-light-theme {
+        display: none;
+    }
+    
+    :root:not([data-theme]) .footer-logo.logo-dark-theme {
+        display: block;
+    }
+}
+
+
 .logo-link {
     display: flex;
     align-items: center;
@@ -916,7 +947,7 @@ body {
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: 0;
-    color: var(--background-secondary);
+    color: var(--text-heading);
 }
 
 .contact-info {
