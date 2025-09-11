@@ -407,6 +407,16 @@ body {
     outline-offset: 2px;
 }
 
+.theme-toggle:active {
+    background: var(--overlay-medium);
+    transform: scale(0.95);
+}
+
+.theme-toggle:focus:not(:active) {
+    outline: 2px solid var(--accent-primary);
+    outline-offset: 2px;
+}
+
 /* Mobile Navigation */
 .mobile-nav-toggle {
     display: none;
@@ -1590,8 +1600,9 @@ html {
     color: white;
     font-weight: bold;
     font-size: 12px;
-    top: 1px;
-    left: 4px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .password-requirements {
@@ -1950,6 +1961,48 @@ html {
     color: var(--text-secondary);
     line-height: 1.6;
     margin-bottom: 1.5rem;
+}
+
+/* Form Disabled Notice Styles */
+.form-disabled-notice {
+    text-align: center;
+    padding: 2rem;
+    background: var(--overlay-light);
+    border: 2px solid var(--accent-tertiary);
+    border-radius: 16px;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.notice-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.form-disabled-notice h3 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+
+.form-disabled-notice p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.form-disabled-notice a {
+    color: var(--accent-primary);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.form-disabled-notice a:hover {
+    color: var(--accent-secondary);
+    text-decoration: underline;
 }
 
 /* Success Message Styles */

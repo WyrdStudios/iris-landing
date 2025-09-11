@@ -247,5 +247,7 @@ function validateEmail(email) {
 document.addEventListener('click', (event) => {
     if (event.target.classList.contains('theme-toggle')) {
         toggleTheme();
+        // Remove focus from button after click to prevent it from staying selected
+        event.target.blur();
     }
 });
