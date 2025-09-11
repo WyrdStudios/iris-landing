@@ -296,7 +296,7 @@ body {
 
 .logo {
     font-family: 'DM Serif Display', serif;
-    font-size: 2rem;
+    font-size: 2.25rem;
     font-weight: 600;
     color: var(--accent-primary);
     text-decoration: none;
@@ -306,14 +306,12 @@ body {
 /* Dark theme logo styling */
 [data-theme="dark"] .logo {
     color: #F8F7F4; /* brand-canvas (white) */
-    font-size: 2.25rem; /* Increased font size */
 }
 
 /* System preference fallback for dark theme */
 @media (prefers-color-scheme: dark) {
     :root:not([data-theme]) .logo {
         color: #F8F7F4; /* brand-canvas (white) */
-        font-size: 2.25rem; /* Increased font size */
     }
 }
 
@@ -1042,8 +1040,17 @@ body {
 
 .footer-bottom p {
     color: var(--background-secondary);
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     opacity: 0.8;
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+
+.footer-bottom hr {
+    border: none;
+    height: 1px;
+    background-color: #2D3138;
+    margin: 0;
 }
 
 /* Back to Top Button */
