@@ -1254,6 +1254,14 @@ body {
         text-align: center;
     }
 
+    .company-info {
+        justify-content: center;
+    }
+
+    .contact-info {
+        justify-content: center;
+    }
+
     .newsletter-form {
         flex-direction: column;
         max-width: 300px;
