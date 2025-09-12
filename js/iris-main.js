@@ -100,21 +100,33 @@ document.addEventListener('DOMContentLoaded', () => {
 function setActiveNavigation() {
     const currentPath = window.location.pathname;
     const navItems = document.querySelectorAll('.nav-item');
+    const mobileWaitlistBtn = document.querySelector('.mobile-waitlist-btn');
     
     navItems.forEach(item => {
         item.classList.remove('active');
     });
     
+    // Remove active state from mobile waitlist button
+    if (mobileWaitlistBtn) {
+        mobileWaitlistBtn.classList.remove('active');
+    }
+    
     let activeNavItem;
+    let activeMobileWaitlistBtn = null;
     
     if (currentPath === '/' || currentPath === '/index.html' || currentPath.endsWith('/')) {
         activeNavItem = document.querySelector('.nav-item[href="/"]');
     } else if (currentPath.includes('waitlist')) {
         activeNavItem = document.querySelector('.nav-item[href="/waitlist"]');
+        activeMobileWaitlistBtn = mobileWaitlistBtn;
     }
     
     if (activeNavItem) {
         activeNavItem.classList.add('active');
+    }
+    
+    if (activeMobileWaitlistBtn) {
+        activeMobileWaitlistBtn.classList.add('active');
     }
 }
 
@@ -124,8 +136,20 @@ function toggleMobileMenu() {
     const mobileToggle = document.querySelector('.mobile-nav-toggle');
     
     if (navItems && mobileToggle) {
-        navItems.classList.toggle('active');
-        mobileToggle.classList.toggle('active');
+        const isActive = navItems.classList.contains('active');
+        
+        if (isActive) {
+            // Close menu
+            navItems.classList.remove('active');
+            mobileToggle.classList.remove('active');
+        } else {
+            // Open menu
+            navItems.style.display = 'flex';
+            // Force reflow to ensure display is set before adding active class
+            navItems.offsetHeight;
+            navItems.classList.add('active');
+            mobileToggle.classList.add('active');
+        }
     }
 }
 
@@ -136,6 +160,13 @@ function closeMobileMenu() {
     if (navItems && mobileToggle) {
         navItems.classList.remove('active');
         mobileToggle.classList.remove('active');
+        
+        // Hide the menu after transition completes
+        setTimeout(() => {
+            if (!navItems.classList.contains('active')) {
+                navItems.style.display = 'none';
+            }
+        }, 300); // Match the CSS transition duration
     }
 }
 

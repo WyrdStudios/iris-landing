@@ -344,6 +344,11 @@ body {
     background: var(--overlay-medium);
 }
 
+.mobile-waitlist-btn.active {
+    color: var(--accent-primary);
+    background: var(--overlay-medium);
+}
+
 .nav-item:focus {
     outline: 2px solid var(--accent-primary);
     outline-offset: 2px;
@@ -428,6 +433,11 @@ body {
     gap: 0.25rem;
 }
 
+/* Mobile-only waitlist button - hidden on desktop */
+.mobile-waitlist-btn {
+    display: none;
+}
+
 .mobile-nav-toggle:focus {
     outline: 2px solid var(--accent-primary);
     outline-offset: 2px;
@@ -440,6 +450,19 @@ body {
     background: var(--text-primary);
     border-radius: 2px;
     transition: all 0.3s ease;
+    transform-origin: center;
+}
+
+.mobile-nav-toggle.active .hamburger-line:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+}
+
+.mobile-nav-toggle.active .hamburger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-nav-toggle.active .hamburger-line:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
 }
 
 /* Content */
@@ -1122,6 +1145,14 @@ body {
         display: flex;
     }
 
+    .nav-item.primary-cta {
+        display: none;
+    }
+
+    .mobile-waitlist-btn {
+        display: block;
+    }
+
     .nav-items {
         display: none;
         position: absolute;
@@ -1129,38 +1160,46 @@ body {
         left: 0;
         right: 0;
         background: var(--nav-bg);
-        border-top: 1px solid var(--border-color);
+        backdrop-filter: blur(10px);
+        border: 1px solid var(--border-color);
+        border-top: none;
+        border-radius: 0 0 16px 16px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
         flex-direction: column;
-        padding: 1rem;
+        padding: 0;
         gap: 0;
+        overflow: hidden;
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: all 0.3s ease;
+        z-index: 1001;
     }
 
     .nav-items.active {
         display: flex;
+        opacity: 1;
+        transform: translateY(0);
     }
 
     .nav-item {
-        padding: 1rem;
+        padding: 1.25rem 1.5rem;
         width: 100%;
-        text-align: center;
+        text-align: left;
         border-bottom: 1px solid var(--border-color);
+        transition: all 0.2s ease;
+        background: transparent;
+        position: relative;
     }
 
-    .nav-item.primary-cta {
-        margin-top: 1rem;
-        border-radius: 12px;
-        border: none;
-        background: var(--accent-primary);
-        color: white !important;
-        font-weight: 600;
-        box-shadow: 0 4px 15px var(--shadow-color);
+    .nav-item:last-child {
+        border-bottom: none;
     }
 
-    .nav-item.primary-cta:hover {
-        background: var(--accent-secondary);
-        transform: translateY(-2px);
-        box-shadow: 0 6px 20px var(--shadow-hover);
+    .nav-item:hover {
+        background: var(--overlay-light);
+        color: var(--text-primary);
     }
+
 
     .hero-headline {
         font-size: var(--mobile-hero-headline);
