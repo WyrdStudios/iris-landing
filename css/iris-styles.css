@@ -589,7 +589,6 @@ body {
 .feature-tile:hover {
     transform: translateY(-4px);
     box-shadow: 0 8px 25px var(--shadow-color);
-    background: var(--card-bg-hover);
 }
 
 .feature-icon {
@@ -1105,23 +1104,12 @@ body {
         max-width: 800px;
     }
     
+    /* Override the base positioning rules to allow natural grid flow */
     .principles-grid .principle-card:nth-child(4),
     .principles-grid .principle-card:nth-child(5),
     .principles-grid .principle-card:nth-child(6) {
-        grid-column: span 1;
-    }
-    
-    .principles-grid .principle-card:nth-child(4) {
-        grid-column-start: 1;
-    }
-    
-    .principles-grid .principle-card:nth-child(5) {
-        grid-column-start: 2;
-    }
-    
-    .principles-grid .principle-card:nth-child(6) {
-        grid-column-start: 1;
-        grid-row-start: 3;
+        grid-column: unset;
+        grid-column-start: unset;
     }
     
     .testimonials-grid {
