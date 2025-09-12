@@ -1582,8 +1582,8 @@ html {
 
 .checkbox-group {
     display: flex;
-    align-items: flex-start;
-    gap: 0.5rem;
+    flex-direction: column;
+    gap: 0.75rem;
 }
 
 .checkbox-label {
@@ -2064,6 +2064,43 @@ html {
     color: var(--text-secondary);
     line-height: 1.6;
     margin-bottom: 2rem;
+}
+
+/* Error Message Styles */
+.error-message {
+    text-align: left;
+    padding: 1.25rem;
+    background: rgba(239, 68, 68, 0.05);
+    border-left: 4px solid var(--accent-error);
+    border-radius: 8px;
+    margin-top: 1rem;
+    box-shadow: 0 2px 8px rgba(239, 68, 68, 0.1);
+    position: relative;
+}
+
+.error-message::before {
+    content: "⚠️";
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    font-size: 1.2rem;
+}
+
+.error-message h3 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--accent-error);
+    margin-bottom: 0.5rem;
+    margin-right: 2rem;
+}
+
+.error-message p {
+    color: var(--text-secondary);
+    line-height: 1.5;
+    font-size: 0.95rem;
+    margin-bottom: 0;
+    margin-right: 2rem;
 }
 
 /* Mobile Responsive Styles for New Components */

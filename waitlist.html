@@ -29,7 +29,7 @@
     <link rel="canonical" href="https://meplusiris.com/waitlist">
     
     <!-- Security Headers -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; font-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com; img-src 'self' data: https://www.google-analytics.com;">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; font-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com https://assets.mlcdn.com https://fonts.mailerlite.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://assets.mlcdn.com https://fonts.mailerlite.com; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://assets.mailerlite.com; img-src 'self' data: https://www.google-analytics.com https://assets.mlcdn.com;">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="X-Frame-Options" content="DENY">
     <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
@@ -60,6 +60,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
     <link rel="stylesheet" href="css/iris-styles.min.css">
+    
+    <!-- MailerLite Styles -->
+    <style type="text/css">@import url("https://assets.mlcdn.com/fonts.css?version=1757592");</style>
+    <link rel="stylesheet" href="css/waitlist-form.min.css">
 </head>
 
 <body>
@@ -86,62 +90,151 @@
                             <h2 class="form-title">Secure Your Spot</h2>
                             <p class="form-subtitle">Join the waitlist to get access to a tool that is built just for you.</p>
                             
-                            <div class="form-disabled-notice">
-                                <div class="notice-icon">⚠️</div>
-                                <h3>Waitlist Temporarily Disabled</h3>
-                                <p>We're currently updating our waitlist system. Please check back soon or contact us directly at <a href="mailto:contact@meplusiris.com">contact@meplusiris.com</a> for updates.</p>
-                            </div>
-                            
-                            <!-- Waitlist form temporarily disabled - uncomment to re-enable -->
-                            <!--
-                            <form class="waitlist-form" id="waitlistForm">
-                                <div class="form-group">
-                                    <label for="email">Email Address *</label>
-                                    <input type="email" id="email" name="email" required placeholder="your@email.com">
+                            <!-- MailerLite Form -->
+                            <div id="mlb2-30816514" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-30816514">
+                                <div class="ml-form-align-center">
+                                    <div class="ml-form-embedWrapper embedForm">
+                                        <div class="ml-form-embedBody ml-form-embedBodyHorizontal row-form">
+                                            <div class="ml-form-embedContent" style="display: none;">
+                                                <h4>Newsletter</h4>
+                                                <p>Signup for news and special offers!</p>
+                                            </div>
+
+                                            <form class="ml-block-form" onsubmit="submitWaitlistForm(event)">
+                                                <div class="ml-form-formContent">
+                                                    <!-- Required Field Indicator -->
+                                                    <div class="required-field-indicator">
+                                                        <span class="required-asterisk">*</span> Required field
+                                                    </div>
+                                                    <div class="ml-form-fieldRow">
+                                                        <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
+                                                            <label>Email Address <span class="required-asterisk">*</span></label>
+                                                            <input aria-label="email" aria-required="true" type="email" class="form-control" data-inputmask="" name="fields[email]" placeholder="Enter your email address" autocomplete="email">
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <div class="ml-form-fieldRow">
+                                                        <div class="ml-field-group ml-field-name">
+                                                            <label>Name <span class="required-asterisk">*</span></label>
+                                                            <input aria-label="name" type="text" class="form-control" data-inputmask="" name="fields[name]" placeholder="Enter your name" autocomplete="given-name">
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <div class="ml-form-fieldRow">
+                                                        <div class="ml-field-group ml-field-current_role ml-validate-required">
+                                                            <label>Current Role <span class="required-asterisk">*</span></label>
+                                                            <select class="custom-select" name="fields[current_role]" aria-label="current_role" aria-required="true">
+                                                                <option value="">Choose your current role</option>
+                                                                <option>Solo entrepreneur/SMB (1-20 employees)</option>
+                                                                <option>Senior professional/IC</option>
+                                                                <option>Manager/Director</option>
+                                                                <option>Executive/Owner/Partner</option>
+                                                                <option>Other</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <div class="ml-form-fieldRow">
+                                                        <div class="ml-field-group ml-field-pain_points ml-validate-required">
+                                                            <label>Primary Way Iris Would Help <span class="required-asterisk">*</span></label>
+                                                            <div class="custom-checkbox-radio-list">
+                                                                <div class="custom-control custom-checkbox">
+                                                                    <input name="fields[pain_points][]" aria-label="pain_points" aria-required="true" class="custom-control-input" type="checkbox" value="Decision support with citations" id="checkbox-30816514-33-0">
+                                                                    <label class="custom-control-label" for="checkbox-30816514-33-0">Decision support with citations</label>
+                                                                </div>
+                                                                <div class="custom-control custom-checkbox">
+                                                                    <input name="fields[pain_points][]" aria-label="pain_points" aria-required="true" class="custom-control-input" type="checkbox" value="Research/synthesis" id="checkbox-30816514-33-1">
+                                                                    <label class="custom-control-label" for="checkbox-30816514-33-1">Research/synthesis</label>
+                                                                </div>
+                                                                <div class="custom-control custom-checkbox">
+                                                                    <input name="fields[pain_points][]" aria-label="pain_points" aria-required="true" class="custom-control-input" type="checkbox" value="Planning with low cognitive load" id="checkbox-30816514-33-2">
+                                                                    <label class="custom-control-label" for="checkbox-30816514-33-2">Planning with low cognitive load</label>
+                                                                </div>
+                                                                <div class="custom-control custom-checkbox">
+                                                                    <input name="fields[pain_points][]" aria-label="pain_points" aria-required="true" class="custom-control-input" type="checkbox" value="Build a private knowledge base" id="checkbox-30816514-33-3">
+                                                                    <label class="custom-control-label" for="checkbox-30816514-33-3">Build a private knowledge base</label>
+                                                                </div>
+                                                                <div class="custom-control custom-checkbox">
+                                                                    <input name="fields[pain_points][]" aria-label="pain_points" aria-required="true" class="custom-control-input" type="checkbox" value="Self-reflection" id="checkbox-30816514-33-4">
+                                                                    <label class="custom-control-label" for="checkbox-30816514-33-4">Self-reflection</label>
+                                                                </div>
+                                                                <div class="custom-control custom-checkbox">
+                                                                    <input name="fields[pain_points][]" aria-label="pain_points" aria-required="true" class="custom-control-input" type="checkbox" value="Other" id="checkbox-30816514-33-5">
+                                                                    <label class="custom-control-label" for="checkbox-30816514-33-5">Other</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <div class="ml-form-fieldRow">
+                                                        <div class="ml-field-group ml-field-time_to_value ml-validate-required">
+                                                            <label>Time-to-Value Expectation for New Tools <span class="required-asterisk">*</span></label>
+                                                            <select class="custom-select" name="fields[time_to_value]" aria-label="time_to_value" aria-required="true">
+                                                                <option value="">Choose your expectation</option>
+                                                                <option>Under 60 seconds</option>
+                                                                <option>1-5  minutes</option>
+                                                                <option>More than 5 minutes</option>
+                                                                <option>Not sure</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <div class="ml-form-fieldRow">
+                                                        <div class="ml-field-group ml-field-iris_use_frequency ml-validate-required">
+                                                            <label>Likelihood of Using Iris 4+ Days/Week During Early Access <span class="required-asterisk">*</span></label>
+                                                            <select class="custom-select" name="fields[iris_use_frequency]" aria-label="iris_use_frequency" aria-required="true">
+                                                                <option value="">Choose your likelihood</option>
+                                                                <option>Very likely</option>
+                                                                <option>Likely</option>
+                                                                <option>Unlikely</option>
+                                                                <option>Not sure</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <div class="ml-form-fieldRow ml-last-item">
+                                                        <div class="ml-field-group ml-field-feedback_frequency ml-validate-required">
+                                                            <label>Willingness to Provide Feedback During Early Access <span class="required-asterisk">*</span></label>
+                                                            <select class="custom-select" name="fields[feedback_frequency]" aria-label="feedback_frequency" aria-required="true">
+                                                                <option value="">Choose your preference</option>
+                                                                <option>Weekly (15-30 minutes)</option>
+                                                                <option>Every 2 weeks</option>
+                                                                <option>Once at the end</option>
+                                                                <option>Not sure</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <input type="hidden" name="ml-submit" value="1">
+
+                                                <div class="ml-form-embedSubmit">
+                                                    <button type="submit" class="primary">Join Waitlist</button>
+                                                    <button disabled="disabled" style="display: none;" type="button" class="loading">
+                                                        <div class="ml-form-embedSubmitLoad"></div>
+                                                        <span class="sr-only">Loading...</span>
+                                                    </button>
+                                                </div>
+
+                                                <!-- Error Message -->
+                                                <div class="error-message" id="errorMessage" style="display: none;">
+                                                    <h3>Almost there!</h3>
+                                                    <p id="errorText">We need a bit more info to get you on the waitlist.</p>
+                                                </div>
+
+                                                <input type="hidden" name="anticsrf" value="true">
+                                            </form>
+                                        </div>
+
+                                        <div class="ml-form-successBody row-success" style="display: none">
+                                            <div class="ml-form-successContent">
+                                                <h4>Thank you!</h4>
+                                                <p>You have successfully joined the Iris Early Access waitlist.</p>
+                                                <p>Scroll down below to learn about what happens next.</p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                
-                                <div class="form-group">
-                                    <label for="name">Full Name *</label>
-                                    <input type="text" id="name" name="name" required placeholder="Your full name">
-                                </div>
-                                
-                                <div class="form-group">
-                                    <label for="role">What best describes you?</label>
-                                    <select id="role" name="role">
-                                        <option value="">Select your role</option>
-                                        <option value="student">Student</option>
-                                        <option value="professional">Working Professional</option>
-                                        <option value="entrepreneur">Entrepreneur</option>
-                                        <option value="creative">Creative Professional</option>
-                                        <option value="researcher">Researcher/Academic</option>
-                                        <option value="other">Other</option>
-                                    </select>
-                                </div>
-                                
-                                <div class="form-group">
-                                    <label for="use-case">How do you plan to use Iris?</label>
-                                    <textarea id="use-case" name="use-case" rows="3" placeholder="Tell us about your ideal personalized assistant scenario (optional)"></textarea>
-                                </div>
-                                
-                                <div class="form-group checkbox-group">
-                                    <label class="checkbox-label">
-                                        <input type="checkbox" id="updates" name="updates" checked>
-                                        <span class="checkmark"></span>
-                                        <span class="checkbox-text">I'd like to receive updates about Iris features and launch news</span>
-                                    </label>
-                                </div>
-                                
-                                <button type="submit" class="submit-button">
-                                    <span class="button-text">Join Waitlist</span>
-                                    <span class="button-loading" style="display: none;">Joining...</span>
-                                </button>
-                            </form>
-                            -->
-                            
-                            <div class="success-message" id="successMessage" style="display: none;">
-                                <div class="success-icon">✅</div>
-                                <h3>Welcome to the Iris Waitlist</h3>
-                                <p>We'll notify you as soon as your spot opens up. Keep an eye on your inbox for updates and exclusive previews.</p>
                             </div>
                         </div>
                         
@@ -280,40 +373,6 @@
     <!-- Scripts -->
     <script src="js/include-components.min.js"></script>
     <script src="js/iris-main.min.js"></script>
-    
-    <script>
-        // Waitlist form handling
-        document.getElementById('waitlistForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const form = e.target;
-            const submitButton = form.querySelector('.submit-button');
-            const buttonText = submitButton.querySelector('.button-text');
-            const buttonLoading = submitButton.querySelector('.button-loading');
-            const successMessage = document.getElementById('successMessage');
-            
-            // Show loading state
-            buttonText.style.display = 'none';
-            buttonLoading.style.display = 'inline';
-            submitButton.disabled = true;
-            
-            // Simulate API call
-            setTimeout(() => {
-                // Hide form and show success message
-                form.style.display = 'none';
-                successMessage.style.display = 'block';
-                
-                // Reset form for demo purposes
-                setTimeout(() => {
-                    form.style.display = 'block';
-                    successMessage.style.display = 'none';
-                    form.reset();
-                    buttonText.style.display = 'inline';
-                    buttonLoading.style.display = 'none';
-                    submitButton.disabled = false;
-                }, 5000);
-            }, 2000);
-        });
-    </script>
+    <script src="js/waitlist-form.min.js"></script>
 </body>
 </html>

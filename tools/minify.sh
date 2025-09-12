@@ -16,6 +16,7 @@ echo "Working from tools/ directory, accessing files in root..."
 # Minify CSS
 echo "Minifying CSS..."
 npx clean-css-cli ../css/iris-styles.css -o ../css/iris-styles.min.css
+npx clean-css-cli ../css/waitlist-form.css -o ../css/waitlist-form.min.css
 
 # Minify JavaScript files separately
 echo "Minifying JavaScript..."
@@ -26,10 +27,15 @@ npx terser ../js/iris-main.js -o ../js/iris-main.min.js --compress --mangle
 # Minify include-components.js
 npx terser ../js/include-components.js -o ../js/include-components.min.js --compress --mangle
 
+# Minify waitlist-form.js
+npx terser ../js/waitlist-form.js -o ../js/waitlist-form.min.js --compress --mangle
+
 echo "Minification complete!"
 echo "Generated files:"
 echo "  - css/iris-styles.min.css"
+echo "  - css/waitlist-form.min.css"
 echo "  - js/iris-main.min.js"
 echo "  - js/include-components.min.js"
+echo "  - js/waitlist-form.min.js"
 echo ""
 echo "Remember to update HTML files to reference the minified versions for production."
