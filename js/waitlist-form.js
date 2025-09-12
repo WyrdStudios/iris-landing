@@ -23,10 +23,7 @@ function submitWaitlistForm(event) {
     const form = event.target;
     const emailInput = form.querySelector('input[name="fields[email]"]');
     const nameInput = form.querySelector('input[name="fields[name]"]');
-    const currentRoleSelect = form.querySelector('select[name="fields[current_role]"]');
-    const painPointsCheckboxes = form.querySelectorAll('input[name="fields[pain_points][]"]:checked');
-    const timeToValueSelect = form.querySelector('select[name="fields[time_to_value]"]');
-    const usageFrequencySelect = form.querySelector('select[name="fields[iris_use_frequency]"]');
+    const currentRoleInput = form.querySelector('input[name="fields[current_role]"]');
     const feedbackFrequencySelect = form.querySelector('select[name="fields[feedback_frequency]"]');
     
     // Hide any previous errors
@@ -43,23 +40,8 @@ function submitWaitlistForm(event) {
         return;
     }
     
-    if (!currentRoleSelect.value) {
-        showError('Please let us know your current role so we can tailor Iris for you.');
-        return;
-    }
-    
-    if (painPointsCheckboxes.length === 0) {
-        showError('Help us understand how Iris can best serve you by selecting at least one option.');
-        return;
-    }
-    
-    if (!timeToValueSelect.value) {
-        showError('Please share your time-to-value expectation for new tools.');
-        return;
-    }
-    
-    if (!usageFrequencySelect.value) {
-        showError('Please let us know how likely you are to use Iris during Early Access.');
+    if (!currentRoleInput.value.trim()) {
+        showError('Please tell us what you do so we can tailor Iris for you.');
         return;
     }
     
@@ -75,14 +57,10 @@ function submitWaitlistForm(event) {
     submitBtn.disabled = true;
     
     // Prepare form data
-    const painPointsValues = Array.from(painPointsCheckboxes).map(cb => cb.value);
     const formData = new URLSearchParams();
     formData.append('fields[email]', emailInput.value);
     formData.append('fields[name]', nameInput.value);
-    formData.append('fields[current_role]', currentRoleSelect.value);
-    painPointsValues.forEach(value => formData.append('fields[pain_points][]', value));
-    formData.append('fields[time_to_value]', timeToValueSelect.value);
-    formData.append('fields[iris_use_frequency]', usageFrequencySelect.value);
+    formData.append('fields[current_role]', currentRoleInput.value);
     formData.append('fields[feedback_frequency]', feedbackFrequencySelect.value);
     formData.append('ml-submit', '1');
     formData.append('anticsrf', 'true');
