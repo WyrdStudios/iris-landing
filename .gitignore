@@ -4,3 +4,4 @@ WyrdStudiosWebsite/*
 **/node_modules/
 DesignSystem/*
 private/*
+.cursor/
