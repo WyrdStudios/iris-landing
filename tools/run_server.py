@@ -1,6 +1,6 @@
 """
 Iris Personalized Assistant Website - Local Development Server
-Copyright (c) 2025 Iris AI. All rights reserved.
+Copyright (c) 2026 Iris AI. All rights reserved.
 
 This software is proprietary and confidential. Unauthorized copying, 
 distribution, modification, public display, or public performance of 

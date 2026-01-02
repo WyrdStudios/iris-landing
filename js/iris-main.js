@@ -2,7 +2,7 @@
  * Iris Website - Main JavaScript Functionality
  * 
  * Based on Wyrd Studios technical foundation
- * Copyright (c) 2025 Iris. All rights reserved.
+ * Copyright (c) 2026 Iris. All rights reserved.
  */
 
 // Archetype responses for the demo

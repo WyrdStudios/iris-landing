@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <footer class="footer">
                         <div class="footer-container">
                             <div class="footer-section">
-                                <p>&copy; 2025 Iris. All rights reserved.</p>
+                                <p>&copy; 2026 Iris. All rights reserved.</p>
                             </div>
                         </div>
                     </footer>
